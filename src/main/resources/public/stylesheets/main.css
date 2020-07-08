@@ -1,5 +1,5 @@
 .jumbotron {
-  background: orange;
+  background: #DE762B;
   color: white;
   padding-bottom: 80px; }
   .jumbotron .btn-primary {
@@ -18,8 +18,8 @@
     background: #7646c1;
     border-radius: 50%;
     overflow: hidden;
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     margin: auto;
     border: 2px solid white; }
     .jumbotron .lang-logo img {
