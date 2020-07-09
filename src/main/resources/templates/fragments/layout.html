@@ -1,18 +1,45 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'index')}">
-<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'portal')}">
-
+<!doctype html>
+<html th:fragment="layout (template, menu)">
+<head>
+    <title>S2S</title>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+</head>
 <body>
-
-<div class="jumbotron text-center">
-  <div class="container" style="height: 800px;">
-    <a href="/" class="lang-logo">
-      <img src="/lang-logo.png" style="width:200px;height:200px">
-    </a>
-    <h1>This is some different shit!</h1>
-    <p>A website for High School and College Students to explain concepts and offer individualized help to Elementary School students and their parents.</p>
-    <a type="button" class="btn btn-primary btn-lg" role="button" style="width: 500px; height:100px" href="https://devcenter.heroku.com/articles/getting-started-with-java"><span class="glyphicon glyphicon-apple"></span>Elementary Student and Parent Questions</a>
-    <a href="https://www.youtube.com" class="btn btn-info" style="width: 500px; height:100px" role="button">Link Button</a>
-    <a type="button" class="btn btn-lg btn-default" role="button" style="width: 500px; height:100px" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><span class="glyphicon glyphicon-book"></span> High School and College Tutors</a>
-  </div>
-</div>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="index.html">WebSiteName</a>
+            <a class="navbar-brand" href="portal">WebSiteName</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Page 1-1</a></li>
+                  <li><a href="#">Page 1-2</a></li>
+                  <li><a href="#">Page 1-3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Page 2</a></li>
+              <li><a href="#">Page 3</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div th:replace="${template}"/>
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/jquery-ui/jquery-ui.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</body>
