@@ -58,6 +58,11 @@ public class Main {
     return "tutors";
   }
 
+  @RequestMapping("/student.html")
+  String student() {
+    return "student";
+  }
+
   @RequestMapping("/db")
   String db(Map<String, Object> model) {
     try (Connection connection = dataSource.getConnection()) {
