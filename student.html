@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>S2S-Student</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+
+  body {
+    position: relative; 
+  }
+  #section1 {padding-top:50px;color: #fff; background-color: #DE762B;}
+  #section2 {padding-top:50px;color: #fff; background-color: #673ab7;}
+  #section3 {padding-top:50px;color: #fff; background-color: #1E88E5;}
+  #section4 {padding-top:50px;color: #fff; background-color: #00bcd4;}
+  #section5 {padding-top:50px;color: #fff; background-color: #009688;}
+  * {box-sizing: border-box;}
+
+  /* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #555;
+    cursor: default;
+    background-color: grey;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+.btn-info {
+    color: #fff;
+    background-color: grey;
+    border-color: grey;
+}
+</style>
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="https://sos-test-app.herokuapp.com/">S2S</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#section1">Welcome</a></li>
+          <li><a href="#section2">Math</a></li>
+          <li><a href="#section3">Science</a></li>
+          <li><a href="#section4">Social Studies</a></li>
+          <li><a href="#section5">English</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav> 
+
+<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+  new Crate({
+    server: '732330444132974682', // Student2Student
+    channel: '732330444132974685' // #general
+  })
+</script>
+
+
+<div id="section1" class="jumbotron text-center">
+  </a>
+  <a href="/" class="lang-logo">
+    <img src="/lang-logo.png" style="width:200px;height:200px">
+  </a>
+  <h1>Welcome to the Elementary Student/ Parent Portal!</h1>
+  <p>Please Select a Subject label in the navigation bar.</p>
+</div>
+<div id="section2" class="container-fluid">
+  
+  <div class="container">
+    <h2>Math</h2>
+    <p>Please Select a grade level to view the standards!</p>
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#home" style="color:white">Kindergarten</a></li>
+      <li><a data-toggle="tab" href="#menu1" style="color:white">First</a></li>
+      <li><a data-toggle="tab" href="#menu2" style="color:white">Second</a></li>
+      <li><a data-toggle="tab" href="#menu3" style="color:white">Third</a></li>
+      <li><a data-toggle="tab" href="#menu3" style="color:white">Fourth</a></li>
+      <li><a data-toggle="tab" href="#menu3" style="color:white">Fifth</a></li>
+      <li><a data-toggle="tab" href="#menu3" style="color:white">Sixth</a></li>
+      <li><a data-toggle="tab" href="#mathchat" style="color:white">Chat</a></li>
+    </ul>
+  
+    <div class="tab-content">
+      <div id="home" class="tab-pane fade in active">
+        <h3>K.NS Number Sense</h3>
+        <b>K.NS.1 Count to at least 100 by ones and tens and count on by one from any number.</b>
+        <p>Count up - up to 20 (K-D.7)</p>
+        <p>Count forward - up to 20 (K-D.12)</p>
+        <p>Count blocks - up to 20 (K-D.16)</p>
+        <p>Count tens and ones - up to 20 (K-D.17)</p>
+        <p>Count on ten frames - up to 30 (K-E.1)</p>
+        <p>Count groups of ten (K-E.2)</p>
+        <p>Count to 100 (K-E.3)</p>
+        <p>Count blocks - up to 30 (K-E.6)</p>
+        <p>Count tens and ones - up to 30 (K-E.7)</p>
+        <p>Count blocks - up to 100 (K-E.9)</p>
+      </div>
+      <div id="menu1" class="tab-pane fade">
+        <h3>Menu 1</h3>
+        <div class="col-sm-4">
+          <div class="embed-container">
+            <iframe width="350" height="200" src="https://www.youtube.com/embed/zpOULjyy-n8" frameborder="0" allowfullscreen></iframe>
+            <iframe width="350" height="200" src="https://www.youtube.com/embed/OMD8hBsA-RI" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="embed-container">
+            <iframe width="350" height="200" src="https://www.youtube.com/embed/CRfy1yorkec" frameborder="0" allowfullscreen></iframe>
+            <iframe width="350" height="200" src="https://www.youtube.com/embed/3wxyN3z9PL4" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="embed-container">
+            <iframe width="350" height="200" src="https://www.youtube.com/embed/wJzNZ1c5C9c" frameborder="0" allowfullscreen></iframe>
+            <iframe width="350" height="200" src="https://www.youtube.com/embed/hCuMWrfXG4E" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div id="menu2" class="tab-pane fade">
+        <div class="container">
+          <h2>Simple Collapsible</h2>
+          <a href="#demo" class="btn btn-info" data-toggle="collapse">Simple collapsible</a>
+          <div id="demo" class="collapse">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </div>
+      <div id="menu3" class="tab-pane fade">
+        <h3>Stuff</h3>
+        <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+      </div>
+      <div id="mathchat" class="tab-pane fade">
+        <widgetbot
+          server="732330444132974682"
+          channel="732983786920345630"
+          width="800"
+          height="600"
+        ></widgetbot>
+<script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="section3" class="container-fluid">
+  <div class="container">
+    <h2>Science</h2>
+    <p>Please Select a grade level to view the standards!</p>
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#scik" style="color:white">Kindergarten</a></li>
+      <li><a data-toggle="tab" href="#sci1" style="color:white">First</a></li>
+      <li><a data-toggle="tab" href="#sci2" style="color:white">Second</a></li>
+      <li><a data-toggle="tab" href="#sci3" style="color:white">Third</a></li>
+      <li><a data-toggle="tab" href="#sci3" style="color:white">Fourth</a></li>
+      <li><a data-toggle="tab" href="#sci3" style="color:white">Fifth</a></li>
+      <li><a data-toggle="tab" href="#sci3" style="color:white">Sixth</a></li>
+    </ul>
+  
+    <div class="tab-content">
+      <div id="scik" class="tab-pane fade in active">
+        <h3>Science Stuff</h3>
+        <b>K.NS.1 Count to at least 100 by ones and tens and count on by one from any number.</b>
+        <p>Count up - up to 20 (K-D.7)</p>
+        <p>Count forward - up to 20 (K-D.12)</p>
+        <p>Count blocks - up to 20 (K-D.16)</p>
+        <p>Count tens and ones - up to 20 (K-D.17)</p>
+        <p>Count on ten frames - up to 30 (K-E.1)</p>
+        <p>Count groups of ten (K-E.2)</p>
+        <p>Count to 100 (K-E.3)</p>
+        <p>Count blocks - up to 30 (K-E.6)</p>
+        <p>Count tens and ones - up to 30 (K-E.7)</p>
+        <p>Count blocks - up to 100 (K-E.9)</p>
+      </div>
+      <div id="sci1" class="tab-pane fade">
+        <h3>Menu 1</h3>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div id="sci2" class="tab-pane fade">
+        <h3>Menu 2</h3>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+      </div>
+      <div id="sci3" class="tab-pane fade">
+        <h3>Menu 3</h3>
+        <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="section4" class="container-fluid">
+  <div class="container">
+    <h2>Social Studies</h2>
+    <p>Please Select a grade level to view the standards!</p>
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#sock" style="color:white">Kindergarten</a></li>
+      <li><a data-toggle="tab" href="#soc1" style="color:white">First</a></li>
+      <li><a data-toggle="tab" href="#soc2" style="color:white">Second</a></li>
+      <li><a data-toggle="tab" href="#soc3" style="color:white">Third</a></li>
+      <li><a data-toggle="tab" href="#soc3" style="color:white">Fourth</a></li>
+      <li><a data-toggle="tab" href="#soc3" style="color:white">Fifth</a></li>
+      <li><a data-toggle="tab" href="#soc3" style="color:white">Sixth</a></li>
+    </ul>
+  
+    <div class="tab-content">
+      <div id="sock" class="tab-pane fade in active">
+        <h3>Social Studies Stuff</h3>
+        <b>K.NS.1 Count to at least 100 by ones and tens and count on by one from any number.</b>
+        <p>Count up - up to 20 (K-D.7)</p>
+        <p>Count forward - up to 20 (K-D.12)</p>
+        <p>Count blocks - up to 20 (K-D.16)</p>
+        <p>Count tens and ones - up to 20 (K-D.17)</p>
+        <p>Count on ten frames - up to 30 (K-E.1)</p>
+        <p>Count groups of ten (K-E.2)</p>
+        <p>Count to 100 (K-E.3)</p>
+        <p>Count blocks - up to 30 (K-E.6)</p>
+        <p>Count tens and ones - up to 30 (K-E.7)</p>
+        <p>Count blocks - up to 100 (K-E.9)</p>
+      </div>
+      <div id="soc1" class="tab-pane fade">
+        <h3>Menu 1</h3>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div id="soc2" class="tab-pane fade">
+        <h3>Menu 2</h3>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+      </div>
+      <div id="soc3" class="tab-pane fade">
+        <h3>Menu 3</h3>
+        <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="section5" class="container-fluid">
+  <div class="container">
+    <h2>English</h2>
+    <p>Please Select a grade level to view the standards!</p>
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#engk" style="color:white">Kindergarten</a></li>
+      <li><a data-toggle="tab" href="#eng1" style="color:white">First</a></li>
+      <li><a data-toggle="tab" href="#eng2" style="color:white">Second</a></li>
+      <li><a data-toggle="tab" href="#eng3" style="color:white">Third</a></li>
+      <li><a data-toggle="tab" href="#eng3" style="color:white">Fourth</a></li>
+      <li><a data-toggle="tab" href="#eng3" style="color:white">Fifth</a></li>
+      <li><a data-toggle="tab" href="#eng3" style="color:white">Sixth</a></li>
+    </ul>
+  
+    <div class="tab-content">
+      <div id="engk" class="tab-pane fade in active">
+        <h3>English Stuff</h3>
+        <b>K.NS.1 Count to at least 100 by ones and tens and count on by one from any number.</b>
+        <p>Count up - up to 20 (K-D.7)</p>
+        <p>Count forward - up to 20 (K-D.12)</p>
+        <p>Count blocks - up to 20 (K-D.16)</p>
+        <p>Count tens and ones - up to 20 (K-D.17)</p>
+        <p>Count on ten frames - up to 30 (K-E.1)</p>
+        <p>Count groups of ten (K-E.2)</p>
+        <p>Count to 100 (K-E.3)</p>
+        <p>Count blocks - up to 30 (K-E.6)</p>
+        <p>Count tens and ones - up to 30 (K-E.7)</p>
+        <p>Count blocks - up to 100 (K-E.9)</p>
+      </div>
+      <div id="eng1" class="tab-pane fade">
+        <h3>Menu 1</h3>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div id="eng2" class="tab-pane fade">
+        <h3>Menu 2</h3>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+      </div>
+      <div id="eng3" class="tab-pane fade">
+        <h3>Menu 3</h3>
+        <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
