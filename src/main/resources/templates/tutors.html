@@ -16,6 +16,7 @@
       position: relative; 
     }
     #section1 {padding-top:50px;height:2000px;color: #fff; background-color: #DE762B;}
+    #chat {padding-top:50px;height:2000px;color: #fff; background-color: white;}
     </style>
   </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -34,6 +35,7 @@
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
             <li><a href="#section1">Welcome</a></li>
+            <li><a href="#chat">Chat</a></li>
           </ul>
         </div>
       </div>
@@ -52,7 +54,16 @@
       <a type="button" class="btn btn-lg btn-default" role="button" href="tutors.html"><span class="glyphicon glyphicon-book"></span> High School and College Tutors</a>
       <div class="col-12 text-center">
         <a class="btn btn-outline-primary" href="mailto:corporate@s2s.com">Contact us to get started</a>
-    </div>
-    </div>
+  </div>
+  <div id="chat" class="tab-pane fade">
+        <widgetbot
+          server="732330444132974682"
+          channel="732983786920345630"
+          width="800"
+          height="600"
+        ></widgetbot>
+        <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+      </div>
+  </div>
   </div>
   <body>
