@@ -54,7 +54,7 @@ public class Main {
   }
 
   @RequestMapping("/tutors.html")
-  String index() {
+  String tutors() {
     return "tutors";
   }
 
