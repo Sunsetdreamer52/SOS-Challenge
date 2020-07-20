@@ -59,8 +59,8 @@ public class Main {
   }
 
   @RequestMapping("/action_page.html")
-  String tutors() {
-    return "tutors";
+  String action() {
+    return "action";
   }
 
   @RequestMapping("/student.html")
