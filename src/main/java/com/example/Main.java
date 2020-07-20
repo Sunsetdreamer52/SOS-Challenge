@@ -58,6 +58,11 @@ public class Main {
     return "tutors";
   }
 
+  @RequestMapping("/action_page.html")
+  String tutors() {
+    return "tutors";
+  }
+
   @RequestMapping("/student.html")
   String student() {
     return "student";
