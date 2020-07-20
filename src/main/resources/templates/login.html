@@ -136,7 +136,17 @@ input[type=submit]:hover {
 <body>
 
 <h2>Responsive Social Login Form</h2>
-<p>I would like to display my username her <output id="username"></output></p>
+<script>
+  function myFunction() {
+    var x = document.getElementById("username");
+    var text = "";
+    var i;
+    for (i = 0; i < x.length ;i++) {
+      text += x.elements[i].value + "<br>";
+    }
+    document.getElementById("password").innerHTML = text;
+  }
+  </script>
 
 <div class="container">
   <form action="/login.html">
