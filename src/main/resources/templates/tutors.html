@@ -20,7 +20,9 @@
       position: relative; 
     }
     #section1 {padding-top:50px;color: #fff; background-color: #DE762B;}
-    #chat {padding-top:50px;color: #fff; background-color: #673ab7;}
+    #chat {padding-top:50px;color: #fff; background-color: #762BDE;}
+    #video {padding-top:50px;color: #333; background-color: #762BDE;}
+    #about {padding-top:50px;color: #fff; background-color: #6726C2;}
     </style>
   </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -28,10 +30,11 @@
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="https://sos-test-app.herokuapp.com/">S2S</a>
       </div>
@@ -40,33 +43,64 @@
           <ul class="nav navbar-nav">
             <li><a href="#section1">Welcome</a></li>
             <li><a href="#chat">Chat</a></li>
+            <li><a href="#video">Submit a Video</a></li>
           </ul>
         </div>
       </div>
     </div>
   </nav>
 
-<div id="section1" class="jumbotron text-center">
-  </a>
-  <a href="/" class="lang-logo">
-    <img src="/lang-logo.png" style="width:150px;height:150px">
-  </a>
-  <h1>Welcome to the Tutor Portal!</h1>
-</div>
+  <div id="section1" class="jumbotron text-center">
+    <a href="/" class="lang-logo">
+      <img src="/lang-logo.png" style="width:150px;height:150px">
+    </a>
+    <h1>Welcome to the Tutor Portal!</h1>
+  </div>
 
-<div id="chat" class="container-fluid">
-  <h2> <a href="https://discord.gg/y4q7JGu">To join the chat as a tutor, click this link and join the server. 
-    You must send messages from the discord website, however, you can view the chat from here.</a></h2>
-  <widgetbot
+  <div id="chat" class="container-fluid">
+    <h2> <a href="https://discord.gg/y4q7JGu">To join the chat as a tutor, click this link and join the server. 
+      You must send messages from the discord client, however, you can view the chat from here.</a></h2>
+    <widgetbot
           server="732330444132974682"
           channel="732983786920345630"
           height="600"
           class="responsive"
         ></widgetbot>
-  <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
-</div>
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+  </div>
+
+  <div id="video">
+    <div style="margin: auto; width:80%; background-color: #BB95EE; padding: 10px;">
+      <form>
+        <fieldset>
+            <legend>Upload a Video</legend>
+            Youtube Link: *<br/>
+            <input type="text" name="name" required autofocus><br/><br/>
+            Select the subject:<br/>
+            <input type="checkbox" name="genre" value="english"> English
+            <input type="checkbox" name="genre" value="math" style="margin-left: 20px"> Math
+            <input type="checkbox" name="genre" value="science" style="margin-left: 20px"> Science
+            <input type="checkbox" name="genre" value="socstud" style="margin-left: 20px"> Social Studies
+        </fieldset><br/>
+        <fieldset>
+            Select the grade of the student requesting help<br/>
+            <input type="checkbox" name="genre" value="k"> K
+            <input type="checkbox" name="genre" value="1" style="margin-left: 20px"> 1st
+            <input type="checkbox" name="genre" value="2" style="margin-left: 20px"> 2nd
+            <input type="checkbox" name="genre" value="3" style="margin-left: 20px"> 3rd
+            <input type="checkbox" name="genre" value="4" style="margin-left: 20px"> 4th
+            <input type="checkbox" name="genre" value="5" style="margin-left: 20px"> 5th
+            <input type="checkbox" name="genre" value="6" style="margin-left: 20px"> 6th
+        </fieldset><br/>
+        <input type="submit">
+      </form>
+    </div><br/><br/>
+  </div>
+
+  <div id="about">
+    <div style="margin: auto; width:60%; padding: 10px;">
         
+    </div>
   </div>
-  </div>
-  </div>
-  <body>
+        
+<body>
