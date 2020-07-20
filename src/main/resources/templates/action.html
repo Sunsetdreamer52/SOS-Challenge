@@ -137,11 +137,13 @@ input[type=submit]:hover {
 
 <h2>Responsive Social Login Form</h2>
 <script>
-  var name = prompt("What's your name?");
-  var lengthOfName = name.length
+  var username = prompt("Username:");
+  var password = prompt("Password:");
   p = document.createElement("p");
-  p.innerHTML = "Your name is "+lengthOfName+" characters long.";
-  document.body.appendChild(p);
+  p.innerHTML = "The username you chose is "+username+".";
+  h = document.createElement("h");
+  h.innerHTML = "The password you chose is "+password+".";
+  document.body.appendChild(h);
   </script>
 
 <div class="container">
