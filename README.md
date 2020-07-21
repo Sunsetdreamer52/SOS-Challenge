@@ -19,7 +19,7 @@ Make sure you have [Git](https://git-scm.com/downloads), [Microsoft Visual Studi
 6. Choose on your PC where to save the files locally
 7. Install Java SE Development Kit 8
 8. Open VSC and navigat to "SOS-Challenge/src/main/java/com/example/"
-9. Right Click the [Main.java](https://github.com/Sunsetdreamer52/SOS-Challenge/tree/master/src/main/java/com/example) file and click "run".
+9. Right Click the "Main.java" file and click "run".
 ```
 
 Your app should now be running on [localhost:5000](http://localhost:5000/).
@@ -28,14 +28,6 @@ If you're going to use a database, ensure you have a local `.env` file that read
 
 ```
 JDBC_DATABASE_URL=jdbc:postgresql://localhost:5432/java_database_name
-```
-
-## Deploying to Heroku
-
-```sh
-$ heroku create
-$ git push heroku master
-$ heroku open
 ```
 
 ## Documentation
