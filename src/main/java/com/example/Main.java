@@ -78,9 +78,9 @@ public class Main {
     return "test";
   }
 
-  @RequestMapping("/main.js")
-  String main() {
-    return "main";
+  @RequestMapping("/recieve.html")
+  String receive() {
+    return "receive";
   }
 
   @RequestMapping("/db")
