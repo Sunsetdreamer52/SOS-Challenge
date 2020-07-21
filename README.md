@@ -13,9 +13,13 @@ Make sure you have [Git](https://git-scm.com/downloads), [Microsoft Visual Studi
 ```sh
 1. Install Git
 2. Install Visual Studio Code (VSC)
-3. Open VSC and push ctrl+shift+p on your keyboard
+3. Open VSC and push "Ctrl + Shift + P" on your keyboard
 4. Now Type "Git:Clone"
-5. Paste our respositor link  
+5. Paste our respositor link "https://github.com/Sunsetdreamer52/SOS-Challenge.git" into the dialog box
+6. Choose on your PC where to save the files locally
+7. Install Java SE Development Kit 8
+8. Open VSC and navigat to "SOS-Challenge/src/main/java/com/example/"
+9. Right Click the [Main.java](https://github.com/Sunsetdreamer52/SOS-Challenge/tree/master/src/main/java/com/example) file and click "run".
 ```
 
 Your app should now be running on [localhost:5000](http://localhost:5000/).
