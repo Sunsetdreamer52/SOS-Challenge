@@ -16,7 +16,7 @@
   
   btn.addEventListener("click", function(){
       var ourRequest= new XMLHttpRequest();
-      ourRequest.open('GET', localStorage.getItem("MyMovieList"));
+      ourRequest.open('GET', "/data.json");
       ourRequest.onload = function(){
           var ourData = JSON.parse(ourRequest.responseText);
           renderHTML(ourData);
@@ -24,13 +24,14 @@
       ourRequest.send();
     });
   
-  function renderHTML(movies) {
+  function renderHTML(data) {
     var htmlString = "";
 
-    for(i = 0; i < movies.length; i++){
+    for(i = 0; i < data.length; i++){
       htmlString += "<p>___________________________";
-      htmlString += "<p> Name: " + movies[i].title;
-      htmlString += "<p> Grade: " + movies[i].year;
+      htmlString += "<p> Name: " + data[i].name;
+      htmlString += "<p> Subject: " + data[i].subject;
+      htmlString += "<p> Grade: " + data[i].grade;
     }
       animalContainer.insertAdjacentHTML('beforeend', htmlString);
   };

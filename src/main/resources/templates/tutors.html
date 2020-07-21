@@ -231,10 +231,10 @@
         <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
     </div>
 
-     <!------------------------------------VIDEO UPLOAD SECTION-------------------------------------->   
+     <!------------------------------------VIDEO UPLOAD SECTION--------------------------------------   
     <div id="video">
         <div style="margin: auto; width:80%; background-color: #BB95EE; padding: 10px;">
-            <form action="mailto:powellcalebm@gmail.com" method="post" enctype="text/plain">
+            <form method="post" enctype="text/plain" name="videoSubmit">
                 <fieldset>
                     <legend>Upload a Video</legend>
                     Youtube Link: *<br/>
@@ -255,11 +255,77 @@
                     <input type="checkbox" name="genre" value="5" style="margin-left: 20px"> 5th
                     <input type="checkbox" name="genre" value="6" style="margin-left: 20px"> 6th
                 </fieldset><br/>
-                <input type="submit">
+                <input type="button" onclick="submit(this.form)" value="Submit">
             </form>
+
+            <script>
+                function submit(form){
+                    localStorage.link = form.link.value;
+                }
+            </script>
+
         </div><br/><br/>
     </div>
 </body>
+<!------------------------------------NEW VIDEO UPLOAD SECTION-------------------------------------->
+
+<div class="container-fluid", style="background-color: #762BDE; padding-top: 40px; padding-bottom: 40px;"> 
+<div style="margin: auto; width:80%; background-color: #BB95EE; padding: 10px;">    
+    <legend>Upload a Video</legend>
+    
+    <form action="/my-handling-form-page" method="post" enctype="text/plain" name="videoSubmit">
+    <div class="videoSubmit">
+        Youtube Link: *<br>
+        <input type="text" name="link"><br>
+        <br>Select the subject:<br>
+                    <input type="radio" name="subject" value="English"> English
+                    <input type="radio" name="subject" value="Math" style="margin-left: 20px"> Math
+                    <input type="radio" name="subject" value="Science" style="margin-left: 20px"> Science
+                    <input type="radio" name="subject" value="Social Studies" style="margin-left: 20px"> Social Studies<br>
+        <br>Select the grade of the student requesting help<br>
+                    <input type="radio" name="grade" value="Kindergarten"> K
+                    <input type="radio" name="grade" value="First" style="margin-left: 20px"> 1st
+                    <input type="radio" name="grade" value="Second" style="margin-left: 20px"> 2nd
+                    <input type="radio" name="grade" value="Third" style="margin-left: 20px"> 3rd
+                    <input type="radio" name="grade" value="Fourth" style="margin-left: 20px"> 4th
+                    <input type="radio" name="grade" value="Fifth" style="margin-left: 20px"> 5th
+                    <input type="radio" name="grade" value="Sixth" style="margin-left: 20px"> 6th<br>
+        <br><input type="button" onclick="check(this.form)" value="Submit"/>
+    </div>
+    </form>
+
+    <br>
+    <p id="verify"></p>
+    <p id="url"></p>
+    <p id="subj"></p>
+    <p id="grd"></p>
+
+<!-- The Script Below Defines the username and Password-->
+<script>
+function check(form){
+    
+    document.getElementById("verify").innerHTML = "Please verify the following information before leaving the page:"
+    document.getElementById("url").innerHTML = "Link: " + form.link.value;
+    document.getElementById("subj").innerHTML = "Subject: " + form.subject.value;
+    document.getElementById("grd").innerHTML = "Grade: " + form.grade.value;
+    localStorage.link = form.link.value;
+    localStorage.subject = form.subject.value;
+    localStorage.grade = form.grade.value;
+    
+    if(form.userid.value == "caleb" && form.pswrd.value == "h"){
+        open("https://www.youtube.com/")
+    }
+    else{
+        alert("the username and password you entered are wrong")
+    }
+}
+</script>
+<!-------------------------------------------------------->
+
+</body>
+</div>
+</div>
+
 <!------------------------------------FOOTER-------------------------------------->
 <footer class="site-footer">
     <div class="container">
@@ -303,3 +369,4 @@
         </div>
     </div>
 </footer>
+</html>
