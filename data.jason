@@ -1,20 +1,20 @@
 [
   {
     "name": "Caleb Powell",
-    "subject" : "math",
-    "grade":"first",
+    "subject" : "Math",
+    "grade":"1",
     "link":"https://www.youtube.com/watch?v=rJesac0_Ftw"
   },
   {
     "name": "Bailey West",
     "subject" : "Science",
-    "grade":"first",
+    "grade":"2",
     "link":"https://www.youtube.com/watch?v=rJesac0_Ftw"
   },
   {
     "name": "Bob Barker",
-    "subject" : "math",
-    "grade":"first",
+    "subject" : "History",
+    "grade":"3",
     "link":"https://www.youtube.com/watch?v=rJesac0_Ftw"
   }
 ]
