@@ -73,6 +73,16 @@ public class Main {
     return "login";
   }
 
+  @RequestMapping("/test.html")
+  String test() {
+    return "test";
+  }
+
+  @RequestMapping("/recieve.html")
+  String recieve() {
+    return "recieve";
+  }
+
   @RequestMapping("/db")
   String db(Map<String, Object> model) {
     try (Connection connection = dataSource.getConnection()) {

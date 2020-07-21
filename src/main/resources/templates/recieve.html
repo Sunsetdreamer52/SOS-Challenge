@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <header>
+    <h1>JSON and AJAX</h1>
+    <button id="btn">Fetch Info for 3 New Animals</button>
+  </header>
+  
+  <div id="animal-info"></div>
+</body>
+ <!-- BELOW IS THE SCRIPT FOR RECIEVING THE JASON FILE DATA-->
+<script>
+  var animalContainer = document.getElementById("animal-info");
+  var btn = document.getElementById("btn");
+  
+  btn.addEventListener("click", function(){
+      var ourRequest= new XMLHttpRequest();
+      ourRequest.open('GET', localStorage.getItem("MyMovieList"));
+      ourRequest.onload = function(){
+          var ourData = JSON.parse(ourRequest.responseText);
+          renderHTML(ourData);
+      };
+      ourRequest.send();
+    });
+  
+  function renderHTML(movies) {
+    var htmlString = "";
+
+    for(i = 0; i < movies.length; i++){
+      htmlString += "<p>___________________________";
+      htmlString += "<p> Name: " + movies[i].title;
+      htmlString += "<p> Grade: " + movies[i].year;
+    }
+      animalContainer.insertAdjacentHTML('beforeend', htmlString);
+  };
+  </script>
+  <!-- ---------------------------------------------------------->
+
+</html>
