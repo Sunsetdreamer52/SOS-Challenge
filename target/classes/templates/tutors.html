@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students Helping Students</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .responsive {
+            width: 100%;
+            height: auto;
+        }
+        body {
+            position: relative; 
+        }
+        #welcome {padding-top:50px;color: #fff; background-color: #DE762B;}
+        #chat {padding-top:50px;color: #fff; background-color: #762BDE;}
+        #video {padding-top:50px;color: #333; background-color: #762BDE;}
+        .site-footer
+        {
+            background-color:#3B156F;
+            padding:45px 0 20px;
+            font-size:15px;
+            line-height:24px;
+            color:#737373;
+        }
+        .site-footer hr
+        {
+            border-top-color:#bbb;
+            opacity:0.5
+        }
+        .site-footer hr.small
+        {
+            margin:20px 0
+        }
+        .site-footer h6
+        {
+            color:#fff;
+            font-size:16px;
+            text-transform:uppercase;
+            margin-top:5px;
+            letter-spacing:2px
+        }
+        .site-footer a
+        {
+            color:#737373;
+        }
+        .site-footer a:hover
+        {
+            color:#3366cc;
+            text-decoration:none;
+        }
+        .footer-links
+        {
+            padding-left:0;
+            list-style:none
+        }
+        .footer-links li
+        {
+            display:block
+        }
+        .footer-links a
+        {
+            color:#737373
+        }
+        .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+        {
+            color:#3366cc;
+            text-decoration:none;
+        }
+        .footer-links.inline li
+        {
+            display:inline-block
+        }
+        .site-footer .social-icons
+        {
+            text-align:right
+        }
+        .site-footer .social-icons a
+        {
+            width:40px;
+            height:40px;
+            line-height:40px;
+            margin-left:6px;
+            margin-right:0;
+            border-radius:100%;
+            background-color:#33353d
+        }
+        .copyright-text
+        {
+            margin:0
+        }
+        @media (max-width:991px)
+        {
+            .site-footer [class^=col-]
+            {
+                margin-bottom:30px
+            }
+        }
+        @media (max-width:767px)
+        {
+            .site-footer
+            {
+                padding-bottom:0
+            }
+            .site-footer .copyright-text,.site-footer .social-icons
+            {
+                text-align:center
+            }
+        }
+        .social-icons
+        {
+            padding-left:0;
+            margin-bottom:0;
+            list-style:none
+        }
+        .social-icons li
+        {
+            display:inline-block;
+            margin-bottom:4px
+        }
+        .social-icons li.title
+        {
+            margin-right:15px;
+            text-transform:uppercase;
+            color:#96a2b2;
+            font-weight:700;
+            font-size:13px
+        }
+        .social-icons a{
+            background-color:#eceeef;
+            color:#818a91;
+            font-size:16px;
+            display:inline-block;
+            line-height:44px;
+            width:44px;
+            height:44px;
+            text-align:center;
+            margin-right:8px;
+            border-radius:100%;
+            -webkit-transition:all .2s linear;
+            -o-transition:all .2s linear;
+            transition:all .2s linear
+        }
+        .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+        {
+            color:#fff;
+            background-color:#29aafe
+        }
+        .social-icons.size-sm a
+        {
+            line-height:34px;
+            height:34px;
+            width:34px;
+            font-size:14px
+        }
+        .social-icons a.facebook:hover
+        {
+            background-color:#3b5998
+        }
+        .social-icons a.twitter:hover
+        {
+            background-color:#00aced
+        }
+        .social-icons a.linkedin:hover
+        {
+            background-color:#007bb6
+        }
+        .social-icons a.dribbble:hover
+        {
+            background-color:#ea4c89
+        }
+        @media (max-width:767px)
+        {
+            .social-icons li.title
+            {
+                display:block;
+                margin-right:0;
+                font-weight:600
+            }
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://sos-test-app.herokuapp.com/">S2S</a>
+            </div>
+            <div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#welcome">Welcome</a></li>
+                        <li><a href="#chat">Chat</a></li>
+                        <li><a href="#video">Submit a Video</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div id="welcome" class="jumbotron text-center" style="margin-bottom: 0px">
+        <a href="/" class="lang-logo">
+            <img src="/lang-logo.png" style="width:150px;height:150px">
+        </a>
+        <h1>Welcome to the Tutor Portal!</h1>
+    </div>
+    
+    <div id="chat" class="container-fluid">
+        <h2> <a href="https://discord.gg/y4q7JGu" style="color: #fff">To join the chat as a tutor, click this link and join the server. 
+            You must send messages from the discord client, however, you can view the chat from here.</a></h2>
+        <widgetbot
+            server="732330444132974682"
+            channel="732983786920345630"
+            height="600"
+            class="responsive"
+            ></widgetbot>
+        <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+    </div>
+        
+    <div id="video">
+        <div style="margin: auto; width:80%; background-color: #BB95EE; padding: 10px;">
+            <form>
+                <fieldset>
+                    <legend>Upload a Video</legend>
+                    Youtube Link: *<br/>
+                    <input type="text" name="name" required><br/><br/>
+                    Select the subject:<br/>
+                    <input type="checkbox" name="genre" value="english"> English
+                    <input type="checkbox" name="genre" value="math" style="margin-left: 20px"> Math
+                    <input type="checkbox" name="genre" value="science" style="margin-left: 20px"> Science
+                    <input type="checkbox" name="genre" value="socstud" style="margin-left: 20px"> Social Studies
+                </fieldset><br/>
+                <fieldset>
+                    Select the grade of the student requesting help<br/>
+                    <input type="checkbox" name="genre" value="k"> K
+                    <input type="checkbox" name="genre" value="1" style="margin-left: 20px"> 1st
+                    <input type="checkbox" name="genre" value="2" style="margin-left: 20px"> 2nd
+                    <input type="checkbox" name="genre" value="3" style="margin-left: 20px"> 3rd
+                    <input type="checkbox" name="genre" value="4" style="margin-left: 20px"> 4th
+                    <input type="checkbox" name="genre" value="5" style="margin-left: 20px"> 5th
+                    <input type="checkbox" name="genre" value="6" style="margin-left: 20px"> 6th
+                </fieldset><br/>
+                <input type="submit">
+            </form>
+        </div><br/><br/>
+    </div>
+</body>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h6>About</h6>
+                <p class="text-justify">Students Helping Students is an initiative to help with the struggles of elementary education during a global pandemic. S2S provides a platform where high school and college students can help the elementary students with their classes and explain the concepts that they get confused on.</p>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Standards</h6>
+                <ul class="footer-links">
+                    <li><a href="https://www.doe.in.gov/standards">All Standards</a></li>
+                    <li><a href="https://www.doe.in.gov/standards/mathematics">Mathematics</a></li>
+                    <li><a href="https://www.doe.in.gov/standards/englishlanguage-arts">English</a></li>
+                    <li><a href="https://www.doe.in.gov/standards/science-computer-science">Science</a></li>
+                    <li><a href="https://www.doe.in.gov/standards/social-studies">Social Studies</a></li>
+                </ul>
+            </div>
+        
+            <div class="col-xs-6 col-md-3">
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                    <li><a>About Us</a></li>
+                    <li><a>Contact Us</a></li>
+                    <li><a>Contribute</a></li>
+                    <li><a>Privacy Policy</a></li>
+                    <li><a>Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
+                    <a href="#">Students Helping Students</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
