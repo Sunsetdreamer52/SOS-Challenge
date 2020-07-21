@@ -1,6 +1,10 @@
 [
   {
+<<<<<<< HEAD
     "name": "The Boss Cat",
+=======
+    "name": "The Boss",
+>>>>>>> be7b0fdc5f9a6005316c958b221328396ebe120c
     "species" : "cat",
     "foods": {
       "likes": ["tuna", "catnip"],
