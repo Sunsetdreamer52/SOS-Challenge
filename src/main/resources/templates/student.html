@@ -10,6 +10,15 @@
 
   <style>
 
+  h3 {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .btn-info{
+    margin:2px
+  }
+
   .responsive {
       width: 100%;
       height: auto;
@@ -26,7 +35,7 @@
   * {box-sizing: border-box;}
 
   /* Button used to open the chat form - fixed at the bottom of the page */
-.open-button {
+  .open-button {
   background-color: #555;
   color: white;
   padding: 16px 20px;
@@ -37,21 +46,22 @@
   bottom: 23px;
   right: 28px;
   width: 280px;
-}
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  }
+  .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
     color: #555;
     cursor: default;
     background-color: grey;
     border: 1px solid #ddd;
     border-bottom-color: transparent;
-}
-.btn-info {
+  }
+  .btn-info {
     color: #fff;
     background-color: grey;
     border-color: grey;
-}
+  }
 </style>
 
+<!--Defines the navigation bar at the top of the page-->
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -76,9 +86,10 @@
       </div>
     </div>
   </div>
-</nav> 
+</nav>
+<!--End of navigation bar-->
 
-
+<!--Beginning of Welcome Screen-->
 <div id="section1" class="jumbotron text-center">
   </a>
   <a href="/" class="lang-logo">
@@ -87,6 +98,7 @@
   <h1>Welcome to the Elementary Student/ Parent Portal!</h1>
   <p>Please Select a Subject label in the navigation bar.</p>
 </div>
+<!--Beginning of Math Section-->
 <div id="section2" class="container-fluid">
   
   <div class="container">
@@ -104,77 +116,206 @@
     </ul>
   
     <div class="tab-content">
+       <!-- Start of Kindergarten Math Section -->
       <div id="home" class="tab-pane fade in active">
-        <!-- Start of Kindergarten Math Section -->
         <div class="container">
           <h2>Math Standards</h2>
           <!-- NUMBER SENSE -->
           <a href="#NumberSense" class="btn btn-info" data-toggle="collapse">NUMBER SENSE</a>
           <div id="NumberSense" class="collapse">
-            <p><b>K.NS.1:</b>  Count to at least 100 by ones and tens and count on by one from any number.</p>
-            <p><b>K.NS.2:</b>  Write whole numbers from zero to 20 and recognize number words from zero to 10. Represent a number of objects with 
-              a written numeral zero to 20 (with zero representing a count of no objects).</p>
-            <p><b>K.NS.3:</b>  Find the number that is one more than or one less than any whole number up to 20</p>
-            <p><b>K.NS.4:</b>  Say the number names in standard order when counting objects, pairing each object with one and only one number
+            <h3>Number Sense</h3>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.NS.1:</b>  Count to at least 100 by ones and tens and count on by one from any number.
+            <!--------------------------------------VIDEO DROPDOWN------------------------------------>
+              <span class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Videos
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><iframe width="350" height="200" src="https://www.youtube.com/embed/8P-xAtbnWxs" frameborder="0" allowfullscreen></iframe></li>
+                </ul>
+              </span>
+            <!--------------------------------------GAMES DROPDOWN------------------------------------->
+            <span class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Games
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu dropdown-menu-left">
+                <li><div class="miniclip-game-embed" data-game-name="bloxorz" data-theme="5" data-width="1024" data-height="768" data-language="en"><a href="https://www.miniclip.com/games/bloxorz/">Play Bloxorz</a></div></li>
+                <script src="//static.miniclipcdn.com/js/game-embed.js"></script>
+              </ul>
+            </span>
+           </div>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.NS.2:</b>  Write whole numbers from zero to 20 and recognize number words from zero to 10. Represent a number of objects with 
+              a written numeral zero to 20 (with zero representing a count of no objects).
+            <!--------------------------------------VIDEO DROPDOWN------------------------------------>
+              <span class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Videos
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><iframe width="350" height="200" src="https://www.youtube.com/embed/S-CwvJZ5Niw" frameborder="0" allowfullscreen></iframe></li>
+                </ul>
+              </span>
+            </div>
+            <!------------------------------------------------------------------------------------------->
+            <div><b>K.NS.3:</b>  Find the number that is one more than or one less than any whole number up to 20
+              <!--------------------------------------VIDEO DROPDOWN------------------------------------>
+              <span class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Videos
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><iframe width="350" height="200" src="https://www.youtube.com/embed/Du6JHupzwVo" frameborder="0" allowfullscreen></iframe></li>
+                </ul>
+              </span>
+            </div>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.NS.4:</b>  Say the number names in standard order when counting objects, pairing each object with one and only one number
               name and each number name with one and only one object. Understand that the last number name said describes the
               number of objects counted and that the number of objects is the same regardless of their arrangement or the order in
-              which they were counted.</p>
-            <p><b>K.NS.5:</b>  Count up to 20 objects arranged in a line, a rectangular array, or a circle. Count up to 10 objects in a scattered
-              configuration. Count out the number of objects, given a number from one to 20.</p>
-            <p><b>K.NS.6:</b>  Recognize sets of one to 10 objects in patterned arrangements and tell how many without counting</p>
-            <p><b>K.NS.7:</b>  Identify whether the number of objects in one group is greater than, less than, or equal to the number of objects in
-              another group (e.g. by using matching and counting strategies).</p>
-            <p><b>K.NS.8:</b>  Compare the values of two numbers from 1 to 20 presented as written numerals.</p>
-            <p><b>K.NS.9:</b>  Correctly use the words for comparison, including: one and many; none, some and all; more and less; most and least;
-              and equal to, more than and less than.</p>
-            <p><b>K.NS.10:</b>  Separate sets of 10 or fewer objects into equal groups.</p>
-            <p><b>K.NS.11:</b>  Develop initial understandings of place value and the base 10 number system by showing equivalent forms of whole
-              numbers from 10 to 20 as groups of tens and ones using objects and drawings.</p>
+              which they were counted.
             </div>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.NS.5:</b>  Count up to 20 objects arranged in a line, a rectangular array, or a circle. Count up to 10 objects in a scattered
+              configuration. Count out the number of objects, given a number from one to 20.
+              <!--------------------------------------VIDEO DROPDOWN------------------------------------>
+              <span class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Videos
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><iframe width="350" height="200" src="https://www.youtube.com/embed/EcCWwCBO-8s" frameborder="0" allowfullscreen></iframe></li>
+                </ul>
+              </span>
+            </div>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.NS.6:</b>  Recognize sets of one to 10 objects in patterned arrangements and tell how many without counting
+            </div>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.NS.7:</b>  Identify whether the number of objects in one group is greater than, less than, or equal to the number of objects in
+              another group (e.g. by using matching and counting strategies).
+               <!--------------------------------------VIDEO DROPDOWN------------------------------------>
+               <span class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Videos
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><iframe width="350" height="200" src="https://www.youtube.com/embed/6u_6y4nTFXA" frameborder="0" allowfullscreen></iframe></li>
+                </ul>
+              </span>
+            </div>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.NS.8:</b>  Compare the values of two numbers from 1 to 20 presented as written numerals.
+              <!--------------------------------------VIDEO DROPDOWN------------------------------------>
+              <span class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Videos
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><iframe width="350" height="200" src="https://www.youtube.com/embed/M6Efzu2slaI" frameborder="0" allowfullscreen></iframe></li>
+                </ul>
+              </span>
+            </div>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.NS.9:</b>  Correctly use the words for comparison, including: one and many; none, some and all; more and less; most and least;
+              and equal to, more than and less than.
+            </div>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.NS.10:</b>  Separate sets of 10 or fewer objects into equal groups.
+            </div>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.NS.11:</b>  Develop initial understandings of place value and the base 10 number system by showing equivalent forms of whole
+              numbers from 10 to 20 as groups of tens and ones using objects and drawings.
+            </div>
+            <!----------------------------------------------------------------------------------------->
+          </div>
           <!-- COMPUTATION AND ALGEBRAIC THINKING -->
           <a href="#Computation" class="btn btn-info" data-toggle="collapse">COMPUTATION AND ALGEBRAIC THINKING</a>
           <div id="Computation" class="collapse">
-            <p><b>K.CA.1:</b>  Use objects, drawings, mental images, sounds, etc., to represent addition and subtraction within 10.</p>
-            <p><b>K.CA.2:</b>  Solve real-world problems that involve addition and subtraction within 10 (e.g., by using objects or drawings to represent
-              the problem).</p>
-            <p><b>K.CA.3:</b>  Use objects, drawings, etc., to decompose numbers less than or equal to 10 into pairs in more than one way, and record
+            <h3>Computation and Algebraic Thinking</h3>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.CA.1:</b>  Use objects, drawings, mental images, sounds, etc., to represent addition and subtraction within 10.
+            </div>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.CA.2:</b>  Solve real-world problems that involve addition and subtraction within 10 (e.g., by using objects or drawings to represent
+              the problem).
+              <!--------------------------------------VIDEO DROPDOWN------------------------------------>
+              <span class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Videos
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><iframe width="350" height="200" src="https://www.youtube.com/embed/4TrOIEZbAfI" frameborder="0" allowfullscreen></iframe></li>
+                </ul>
+              </span>
+            </div>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.CA.3:</b>  Use objects, drawings, etc., to decompose numbers less than or equal to 10 into pairs in more than one way, and record
               each decomposition with a drawing or an equation (e.g., 5 = 2 + 3 and 5 = 4 + 1). [In Kindergarten, students should see
               equations and be encouraged to trace them, however, writing equations is not required.]
-              </p>
-            <p><b>K.CA.4:</b>  Find the number that makes 10 when added to the given number for any number from one to nine (e.g., by using
-              objects or drawings), and record the answer with a drawing or an equation.</p>
-            <p><b>K.CA.5:</b> Create, extend, and give an appropriate rule for simple repeating and growing patterns with numbers and shapes.</p>
+            </div>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.CA.4:</b>  Find the number that makes 10 when added to the given number for any number from one to nine (e.g., by using
+              objects or drawings), and record the answer with a drawing or an equation.
+              <!--------------------------------------VIDEO DROPDOWN------------------------------------>
+              <span class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Videos
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><iframe width="350" height="200" src="https://www.youtube.com/embed/YBkpC29_GaI" frameborder="0" allowfullscreen></iframe></li>
+                </ul>
+              </span>
+            </div>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.CA.5:</b> Create, extend, and give an appropriate rule for simple repeating and growing patterns with numbers and shapes.
+            </div>
+            <!----------------------------------------------------------------------------------------->
           </div>
           <!-- GEOMETRY -->
           <a href="#Geometry" class="btn btn-info" data-toggle="collapse">GEOMETRY</a>
           <div id="Geometry" class="collapse">
-            <p><b>K.G.1:</b>  Describe the positions of objects and geometric shapes in space using the terms inside, outside, between, above,
-              below, near, far, under, over, up, down, behind, in front of, next to, to the left of and to the right of.</p>
-            <p><b>K.G.2:</b>  Compare two- and three-dimensional shapes in different sizes and orientations, using informal language to describe
+            <h3>Geometry</h3>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.G.1:</b>  Describe the positions of objects and geometric shapes in space using the terms inside, outside, between, above,
+              below, near, far, under, over, up, down, behind, in front of, next to, to the left of and to the right of.
+            </div>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.G.2:</b>  Compare two- and three-dimensional shapes in different sizes and orientations, using informal language to describe
               their similarities, differences, parts (e.g., number of sides and vertices/"corners") and other attributes (e.g., having sides
-              of equal length).</p>
-            <p><b>K.G.3:</b>  Model shapes in the world by composing shapes from objects (e.g., sticks and clay balls) and drawing shapes.</p>
-            <p><b>K.G.4:</b>  Compose simple geometric shapes to form larger shapes (e.g., create a rectangle composed of two triangles).</p>
+              of equal length).
+            </div>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.G.3:</b>  Model shapes in the world by composing shapes from objects (e.g., sticks and clay balls) and drawing shapes.
+            </div>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.G.4:</b>  Compose simple geometric shapes to form larger shapes (e.g., create a rectangle composed of two triangles).
+            </div>
+            <!----------------------------------------------------------------------------------------->
           </div>
           <!-- MEASUREMENT -->
           <a href="#measure" class="btn btn-info" data-toggle="collapse">MEASUREMENT</a>
           <div id="measure" class="collapse">
-            <p><b>K.M.1:</b>  Make direct comparisons of the length, capacity, weight, and temperature of objects, and recognize which object is
-              shorter, longer, taller, lighter, heavier, warmer, cooler, or holds more.</p>
-            <p><b>K.M.2:</b>  Understand concepts of time, including: morning, afternoon, evening, today, yesterday, tomorrow, day, week, month,
-              and year. Understand that clocks and calendars are tools that measure time.</p>
+            <h3>Measurement</h3>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.M.1:</b>  Make direct comparisons of the length, capacity, weight, and temperature of objects, and recognize which object is
+              shorter, longer, taller, lighter, heavier, warmer, cooler, or holds more.
+            </div>
+            <div><b>K.M.2:</b>  Understand concepts of time, including: morning, afternoon, evening, today, yesterday, tomorrow, day, week, month,
+              and year. Understand that clocks and calendars are tools that measure time.
+            </div>
+            <!----------------------------------------------------------------------------------------->
           </div>
           <!-- DATA ANALYSIS -->
           <a href="#data" class="btn btn-info" data-toggle="collapse">DATA ANALYSIS</a>
           <div id="data" class="collapse">
-            <p><b>K.DA.1:</b>  Make direct comparisons of the length, capacity, weight, and temperature of objects, and recognize which object is
-              shorter, longer, taller, lighter, heavier, warmer, cooler, or holds more.</p>
-            <p><b>K.M.2:</b>  Understand concepts of time, including: morning, afternoon, evening, today, yesterday, tomorrow, day, week, month,
-              and year. Understand that clocks and calendars are tools that measure time.</p>
+            <h3>Data Analysis</h3>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.DA.1:</b>  Make direct comparisons of the length, capacity, weight, and temperature of objects, and recognize which object is
+              shorter, longer, taller, lighter, heavier, warmer, cooler, or holds more.
+            </div>
+            <!----------------------------------------------------------------------------------------->
+            <div><b>K.M.2:</b>  Understand concepts of time, including: morning, afternoon, evening, today, yesterday, tomorrow, day, week, month,
+              and year. Understand that clocks and calendars are tools that measure time.
+            </div>
+            <!----------------------------------------------------------------------------------------->
           </div>
-          <!-- End of Kindergarten Math Section -->
         </div>
       </div>
+      <!-- Start of First Grade Math Section -->
       <div id="menu1" class="tab-pane fade">
         <h3>Menu 1</h3>
         <div class="col-sm-4">
@@ -196,6 +337,7 @@
           </div>
         </div>
       </div>
+      <!-- Start of Second Grade Math Section -->
       <div id="menu2" class="tab-pane fade">
         <h3>K.NS Number Sense</h3>
         <b>K.NS.1 Count to at least 100 by ones and tens and count on by one from any number.</b>
@@ -210,6 +352,7 @@
         <p>Count tens and ones - up to 30 (K-E.7)</p>
         <p>Count blocks - up to 100 (K-E.9)</p>
       </div>
+      <!-- Start of Third Grade Math Section -->
       <div id="menu3" class="tab-pane fade">
 
         <!-- Place this code where you'd like the game to appear -->
@@ -217,6 +360,7 @@
         <script src="//static.miniclipcdn.com/js/game-embed.js"></script>
 
       </div>
+      <!-- Start of Math Chat Section -->
       <div id="mathchat" class="tab-pane fade">
         <widgetbot
           server="732330444132974682"
@@ -229,6 +373,7 @@
     </div>
   </div>
 </div>
+<!--Beginning of Science Section-->
 <div id="section3" class="container-fluid">
   <div class="container">
     <h2>Science</h2>
@@ -283,6 +428,7 @@
     </div>
   </div>
 </div>
+<!--Beginning of SS Section-->
 <div id="section4" class="container-fluid">
   <div class="container">
     <h2>Social Studies</h2>
@@ -337,6 +483,7 @@
     </div>
   </div>
 </div>
+<!--Beginning of English Section-->
 <div id="section5" class="container-fluid">
   <div class="container">
     <h2>English</h2>
