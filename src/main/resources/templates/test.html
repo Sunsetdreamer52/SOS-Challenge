@@ -16,7 +16,7 @@
   
   btn.addEventListener("click", function(){
       var ourRequest= new XMLHttpRequest();
-      ourRequest.open('GET', 'https://raw.githubusercontent.com/Sunsetdreamer52/SOS-Challenge/master/data.json');
+      ourRequest.open('GET', 'https://raw.githubusercontent.com/Sunsetdreamer52/SOS-Challenge/master/data.jason');
       ourRequest.onload = function(){
           var ourData = JSON.parse(ourRequest.responseText);
           renderHTML(ourData);
