@@ -2,40 +2,29 @@
 <html>
 
 <body>
-  <header>
-    <h1>JSON and AJAX</h1>
-    <button id="btn">Fetch Info for 3 New Animals</button>
-  </header>
-  
-  <div id="animal-info"></div>
+  <h1>Send JSON through AJAX POST</h1>
 </body>
+ <!-- BELOW IS THE SCRIPT FOR RECIEVING THE JASON FILE DATA-->
+<script>
+  const toSend = {
+    name: "Linda Hall",
+    subject : "Cheese",
+    grade: 5,
+    link:"https://www.youtube.com/watch?v=mNrJDGfQGz0"
+  }
 
-  <script>
-  var animalContainer = document.getElementById("animal-info");
-  var btn = document.getElementById("btn");
-  
-  btn.addEventListener("click", function(){
-      var ourRequest= new XMLHttpRequest();
-      ourRequest.open('GET', 'https://raw.githubusercontent.com/Sunsetdreamer52/SOS-Challenge/master/data.jason');
-      ourRequest.onload = function(){
-          var ourData = JSON.parse(ourRequest.responseText);
-          renderHTML(ourData);
-      };
-      ourRequest.send();
-    });
-  
-  function renderHTML(data) {
-    var htmlString = "";
+  const jsonString = JSON.stringify(toSend);
+  const xhr = new XMLHttpRequest();
 
-    for(i = 0; i < data.length; i++){
-      htmlString += "<p>___________________________";
-      htmlString += "<p> Name: " + data[i].name;
-      htmlString += "<p> Grade: " + data[i].grade;
-      htmlString += "<p> Subject: " + data[i].subject;
-      htmlString += "<p> Link: " + data[i].link;
-    }
-      animalContainer.insertAdjacentHTML('beforeend', htmlString);
-  };
-  </script>
+  xhr.open("POST", "recieve.php");
+  xhr.setRequestHeader("Content-type", "application/json");
+  xhr.send(jsonString);
+
+
+</script>
+  <!-- ---------------------------------------------------------->
+
+
+
 
 </html>
