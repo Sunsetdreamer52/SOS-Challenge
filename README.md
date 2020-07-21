@@ -1,20 +1,21 @@
-# java-getting-started
+# Student 2 Student Web Application
 
-A barebones Java app, which can easily be deployed to Heroku.
+A way for student to connect with other students/tutors and get help with homework easily.
 
-This application supports the [Getting Started with Java on Heroku](https://devcenter.heroku.com/articles/getting-started-with-java) article - check it out.
+This application supports the  is hosted on the Heroku Cloud Application Platform. You can [Visit our Website](https://sos-test-app.herokuapp.com/) here or create your own Heroku Cloud application from our repository below.
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ## Running Locally
 
-Make sure you have Java and Maven installed.  Also, install the [Heroku CLI](https://cli.heroku.com/).
+Make sure you have [Git](https://git-scm.com/downloads), [Microsoft Visual Studio Code](https://code.visualstudio.com/) (or another tex editor), and the [Java SE Development Kit 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) Installed on your PC.
 
 ```sh
-$ git clone https://github.com/heroku/java-getting-started.git
-$ cd java-getting-started
-$ mvn install
-$ heroku local:start
+1. Install Git
+2. Install Visual Studio Code (VSC)
+3. Open VSC and push ctrl+shift+p on your keyboard
+4. Now Type "Git:Clone"
+5. Paste our respositor link  
 ```
 
 Your app should now be running on [localhost:5000](http://localhost:5000/).
