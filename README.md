@@ -34,4 +34,4 @@ JDBC_DATABASE_URL=jdbc:postgresql://localhost:5432/java_database_name
 
 For more information about using Java on Heroku, see these Dev Center articles:
 
-- [Java on Heroku](https://devcenter.heroku.com/categories/java)
+- [Java on Heroku](https://raw.githubusercontent.com/Sunsetdreamer52/SOS-Challenge/master/COMPILE.bata)
