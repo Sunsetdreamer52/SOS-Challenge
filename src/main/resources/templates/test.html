@@ -24,6 +24,10 @@
         <div class="formBox">
             <button id="btn">Click to Add</button>
         </div>
+        <button onclick="myFunction()">Get the item value</button>
+        <!--------------------------->
+        <p id="demo"></p>
+        <!--------------------------->
         <div id="msg">
             <pre></pre>
         </div>
@@ -54,5 +58,25 @@
             document.getElementById('btn').addEventListener('click', addMovie);
         });
     </script>
+
+
+
+    <!-- BELOW IS THE SCRIPT FOR RECIEVING THE JASON FILE DATA-->
+    <script>
+    function myFunction() {
+    var x = localStorage.getItem("MyMovieList".title);
+    document.getElementById("demo").innerHTML = x;
+    }
+    </script>
+     <!---------------------------------------------------------->
+
+
+
+
+
+
+
+
+
 </body>
 </html>

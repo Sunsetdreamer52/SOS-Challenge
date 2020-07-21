@@ -79,8 +79,8 @@ public class Main {
   }
 
   @RequestMapping("/recieve.html")
-  String receive() {
-    return "receive";
+  String recieve() {
+    return "recieve";
   }
 
   @RequestMapping("/db")

@@ -2,7 +2,14 @@
 <html>
 <body>
 
-<p>Try the Username: "CalebPowell" and the Password: "S2S"<p>
+<h1>Welcome!</h1>
+<p id="tempname"></p>
+<script>
+  document.getElementById("tempname").innerHTML = sessionStorage.userid + " is now your username";
+  if(sessionStorage.userid == null){
+    document.getElementById("tempname").innerHTML = "Please Sign in";
+  }
+</script>
 
 <form name="login">
 <div class="login">
@@ -12,11 +19,18 @@
 </div>
 </form>
 
+<p id="demos"></p>
+<p id="demo"></p>
+
 <!-- The Script Below Defines the username and Password-->
 <script>
 function check(form){
-  if(form.userid.value == "CalebPowell" && form.pswrd.value == "S2S"){
-    open('tutors.html')
+  document.getElementById("demo").innerHTML = form.pswrd.value + " is the password you chose";
+  document.getElementById("demos").innerHTML = form.userid.value + " is the username you chose";
+  sessionStorage.userid = form.userid.value;
+
+  if(form.userid.value == "caleb" && form.pswrd.value == "h"){
+    open("https://www.youtube.com/")
   }
   else{
     alert("the username and password you entered are wrong")
