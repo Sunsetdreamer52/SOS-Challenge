@@ -3,25 +3,79 @@
 
 <body>
   <header>
-    <h1>JSON and AJAX</h1>
-    <button id="btn">Fetch Info for 3 New Animals</button>
+    <title>Recieve Info</title>
+    <h1>Pulling localStorage Test Page</h1>
+    <p id="counter"></p>
+
+    <script>
+      function logout(form){
+          alert("logging off");
+          localStorage.removeItem('userid');
+          open("/","_self")
+      }
+  </script>
+
+<!--THIS SCRIPT DEFINES HOW THE DATA IS DISPLAYED-->
+    <script>
+    function update(form){
+      var name = localStorage.getItem('sender');
+      var link = localStorage.getItem('link' + clickCounter);
+      var subject = localStorage.getItem('subject' + clickCounter);
+      var grade = localStorage.getItem('grade' + clickCounter);
+
+      document.getElementById("url"+clickCounter).innerHTML += "___________________________";
+      document.getElementById("url"+clickCounter).innerHTML += "<br>";
+      document.getElementById("url"+clickCounter).innerHTML += "<br>";
+      document.getElementById("url"+clickCounter).innerHTML += "Name: " + name;
+      document.getElementById("url"+clickCounter).innerHTML += "<br>";
+      document.getElementById("url"+clickCounter).innerHTML += "<br>";
+      document.getElementById("url"+clickCounter).innerHTML += "Subject: " + subject;
+      document.getElementById("url"+clickCounter).innerHTML += "<br>";
+      document.getElementById("url"+clickCounter).innerHTML += "<br>";
+      document.getElementById("url"+clickCounter).innerHTML += "Grade: " + grade;
+      document.getElementById("url"+clickCounter).innerHTML += "<br>";
+      document.getElementById("url"+clickCounter).innerHTML += "<br>";
+      document.getElementById("url"+clickCounter).innerHTML += "Link: " + link;
+      document.getElementById("url"+clickCounter).innerHTML += "<br>";
+      
+    }
+    </script>
+  <!------------------------------------------------------------------------------------------------------------------>
+
+  <button id="btn" onclick="update(this.form)">Update Video Submissions</button>
+  <button id="btn" onclick="logout(this.form)">Log Out</button>
   </header>
+  
+  <!--THIS IS THE PLACEHOLDER FOR WHERE THE SCRIPT PLACES THE DATA-->
+  <p id="url10"></p>
+  <p id="url9"></p>
+  <p id="url8"></p>
+  <p id="url7"></p>
+  <p id="url6"></p>
+  <p id="url5"></p>
+  <p id="url4"></p>
+  <p id="url3"></p>
+  <p id="url2"></p>
+  <p id="url1"></p>
+  <!----------------------------------------------------------------->
   
   <div id="animal-info"></div>
 </body>
  <!-- BELOW IS THE SCRIPT FOR RECIEVING THE JASON FILE DATA-->
 <script>
+  var clickCounter = 1;
   var animalContainer = document.getElementById("animal-info");
   var btn = document.getElementById("btn");
   
   btn.addEventListener("click", function(){
       var ourRequest= new XMLHttpRequest();
-      ourRequest.open('GET', "/data.json");
+      ourRequest.open('GET', "/data-"+clickCounter+".json");
       ourRequest.onload = function(){
           var ourData = JSON.parse(ourRequest.responseText);
           renderHTML(ourData);
       };
       ourRequest.send();
+      clickCounter++;
     });
   
   function renderHTML(data) {

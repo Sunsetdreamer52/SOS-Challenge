@@ -1,43 +1,53 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/">
+    <link href="signin.css" rel="stylesheet">
+    <title>Signin Template for Bootstrap</title>
+  </head>
 
-<h1>Welcome!</h1>
-<p id="tempname"></p>
-<script>
-  document.getElementById("tempname").innerHTML = sessionStorage.userid + " is now your username";
-  if(sessionStorage.userid == null){
-    document.getElementById("tempname").innerHTML = "Please Sign in";
-  }
+  <script>
+  window.onload = function() {
+    check(this.form);
+  };
 </script>
 
-<form name="login">
-<div class="login">
-    <input type="text" placeholder="username" name="userid"><br>
-    <input type="password" placeholder="password" name="pswrd"><br>
-    <input type="button" onclick="check(this.form)" value="login"/>
-</div>
-</form>
-
-<p id="demos"></p>
-<p id="demo"></p>
-
-<!-- The Script Below Defines the username and Password-->
+<body class="text-center">
+  <form class="form-signin" novalidate>
+    <a href="/" class="lang-logo">
+      <img src="/lang-logo.png" style="width:200px;height:200px">
+    </a>
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <input type="text" name="userid" class="form-control" placeholder="First and Last Name">
+    <input type="text" name="pswrd" class="form-control" placeholder="Password">
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" onclick="check(this.form)" href="/">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">&copy; if already signed in, enable pop-ups</p>
+  </form>
+  
+<!--CHECK IF THE USER IS ALREADY LOGGED IN-->
 <script>
 function check(form){
-  document.getElementById("demo").innerHTML = form.pswrd.value + " is the password you chose";
-  document.getElementById("demos").innerHTML = form.userid.value + " is the username you chose";
-  sessionStorage.userid = form.userid.value;
 
-  if(form.userid.value == "caleb" && form.pswrd.value == "h"){
-    open("https://www.youtube.com/")
+  if(localStorage.userid && localStorage.userid){
+    open("tutors.html","_self")
   }
-  else{
-    alert("the username and password you entered are wrong")
+  if(localStorage.userid == "logs"){
+    open("recieve.html","_self")
   }
+  localStorage.userid = form.userid.value;
+  localStorage.pswrd = form.pswrd.value;
 }
-
 </script>
+<!-------------------------------------->
 
 </body>
 </html>

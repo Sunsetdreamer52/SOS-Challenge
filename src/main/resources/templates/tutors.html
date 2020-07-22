@@ -12,12 +12,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
+        .clearfix {
+            overflow: auto;
+        }
+        .left {
+            float: left;
+            width: 30%;
+            height: 80%;
+            padding: 5px;
+        }
+        .right {
+            float: right;
+            width: 80%;
+            padding: 5px;
+        }
         .responsive {
             width: 100%;
             height: auto;
         }
         body {
-            position: relative; 
+            position: relative;
+            font-size: 15px;
         }
         #welcome {padding-top:50px;color: #fff; background-color: #DE762B;}
         #chat {padding-top:50px;color: #fff; background-color: #762BDE;}
@@ -187,6 +202,12 @@
         }
     </style>
 </head>
+<script>
+    function logout(form){
+        alert("logging off");
+        localStorage.removeItem('userid');
+    }
+</script>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
     
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -198,14 +219,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="https://sos-test-app.herokuapp.com/">S2S</a>
+                <a class="navbar-brand" href="/">S2S</a>
             </div>
             <div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
                         <li><a href="#welcome">Welcome</a></li>
                         <li><a href="#chat">Chat</a></li>
-                        <li><a href="#video">Submit a Video</a></li>
+                        <li><a href="#footer">Submit a Video</a></li>
+                        <li><a href="\" onclick="logout(this.form)">Log Out</a></li>
                     </ul>
                 </div>
             </div>
@@ -216,118 +238,126 @@
         <a href="/" class="lang-logo">
             <img src="/lang-logo.png" style="width:150px;height:150px">
         </a>
-        <h1>Welcome to the Tutor Portal!</h1>
+        <h1 id="welcomeMssg"></h1>
+        <script>
+            var displayName = localStorage.getItem('userid');
+            if(displayName){
+                displayName = " " + displayName;
+            }
+            else{
+                displayName = " First Last "
+            }
+            document.getElementById("welcomeMssg").innerHTML = "Welcome To Your Tutor Portal," + displayName + "!";
+        </script>
     </div>
+
+<!------------------------------------------------------------------------------------------------------------------------------>
+    <div id="chat" class="clearfix">
+
+        <h4> <a href="https://discord.gg/y4q7JGu" style="color: #fff">To join the chat as a tutor, click this link and join the server. 
+            You must send messages from the discord client, however, you can view the chat from here.</a></h4> 
+        <iframe class="right" src="https://widgetbot.io/channels/732330444132974682/732983786920345630/?api=71c8e7c4-6669-438c-8aa6-2216bc67cfd7" 
+                style="border: none; width: 70%; height: 720px;"></iframe>
+
+<!------------------------------------------------------------------------------------------------------------------------------>
+
+        <script>var submCount = 0;</script>
+
+        <div class="container-fluid, left", style="background-color: #762BDE;"> 
+        <div style=" background-color: #BB95EE; padding: 10px; color: #333;">    
+        <legend>Upload a Video</legend>
     
-    <div id="chat" class="container-fluid">
-        <h2> <a href="https://discord.gg/y4q7JGu" style="color: #fff">To join the chat as a tutor, click this link and join the server. 
-            You must send messages from the discord client, however, you can view the chat from here.</a></h2>
-        <widgetbot
-            server="732330444132974682"
-            channel="732983786920345630"
-            height="600"
-            class="responsive"
-            ></widgetbot>
-        <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+        <form name="videoSubmit">
+        <div class="videoSubmit">
+            <h3>Youtube Link: <h3>
+            <input type="text" name="link" placeholder="www.youtube.com"><br>
+            <div><h3>Select the subject:<h3>
+                <div>
+                    <input type="radio" id = "eng" name="subject" value="English">
+                    <label for="eng">English</label>
+                </div>
+                <div>
+                    <input type="radio" id = "math" name="subject" value="Math">
+                    <label for="Math">Math</label>
+                </div>
+                <div>
+                    <input type="radio" id = "sci" name="subject" value="Science">
+                    <label for="sci">Science</label>
+                </div>
+                <div>
+                    <input type="radio" id = "soc" name="subject" value="Social Studies">
+                    <label for="soc">Social Studies</label>
+                </div>
+            </div>
+                    
+            <div><h3>Select the grade of the student requesting help<h3>
+                <div>
+                    <input type="radio" id = "k" name="grade" value="Kindergarten">
+                    <label for="k">Kindergarten</label>
+                </div>
+                <div>
+                    <input type="radio" id = "1" name="grade" value="First">
+                    <label for="1">First</label>
+                </div>
+                <div>
+                    <input type="radio" id = "2" name="grade" value="Second">
+                    <label for="2">Second</label>
+                </div>
+                <div>
+                    <input type="radio" id = "3" name="grade" value="Third">
+                    <label for="3">Third</label>
+                </div>
+                <div>
+                    <input type="radio" id = "4" name="grade" value="Fourth">
+                    <label for="4">Fourth</label>
+                </div>
+                <div>
+                    <input type="radio" id = "5" name="grade" value="Fifth">
+                    <label for="5">Fifth</label>
+                </div>
+                <div>
+                    <input type="radio" id = "6" name="grade" value="Sixth">
+                    <label for="5">Sixth</label>
+                </div>
+            </div>
+            <br><input type="button" onclick="check(this.form)" value="Submit"/>
+        </form>
     </div>
+</div>
 
-     <!------------------------------------VIDEO UPLOAD SECTION--------------------------------------   
-    <div id="video">
-        <div style="margin: auto; width:80%; background-color: #BB95EE; padding: 10px;">
-            <form method="post" enctype="text/plain" name="videoSubmit">
-                <fieldset>
-                    <legend>Upload a Video</legend>
-                    Youtube Link: *<br/>
-                    <input type="text" name="link" required><br/><br/>
-                    Select the subject:<br/>
-                    <input type="checkbox" name="subject" value="english"> English
-                    <input type="checkbox" name="subject" value="math" style="margin-left: 20px"> Math
-                    <input type="checkbox" name="subject" value="science" style="margin-left: 20px"> Science
-                    <input type="checkbox" name="subject" value="socstud" style="margin-left: 20px"> Social Studies
-                </fieldset><br/>
-                <fieldset>
-                    Select the grade of the student requesting help<br/>
-                    <input type="checkbox" name="genre" value="k"> K
-                    <input type="checkbox" name="genre" value="1" style="margin-left: 20px"> 1st
-                    <input type="checkbox" name="genre" value="2" style="margin-left: 20px"> 2nd
-                    <input type="checkbox" name="genre" value="3" style="margin-left: 20px"> 3rd
-                    <input type="checkbox" name="genre" value="4" style="margin-left: 20px"> 4th
-                    <input type="checkbox" name="genre" value="5" style="margin-left: 20px"> 5th
-                    <input type="checkbox" name="genre" value="6" style="margin-left: 20px"> 6th
-                </fieldset><br/>
-                <input type="button" onclick="submit(this.form)" value="Submit">
-            </form>
-
-            <script>
-                function submit(form){
-                    localStorage.link = form.link.value;
-                }
-            </script>
-
-        </div><br/><br/>
-    </div>
-</body>
-<!------------------------------------NEW VIDEO UPLOAD SECTION-------------------------------------->
-
-<div class="container-fluid", style="background-color: #762BDE; padding-top: 40px; padding-bottom: 40px;"> 
-<div style="margin: auto; width:80%; background-color: #BB95EE; padding: 10px;">    
-    <legend>Upload a Video</legend>
-    
-    <form action="/my-handling-form-page" method="post" enctype="text/plain" name="videoSubmit">
-    <div class="videoSubmit">
-        Youtube Link: *<br>
-        <input type="text" name="link"><br>
-        <br>Select the subject:<br>
-                    <input type="radio" name="subject" value="English"> English
-                    <input type="radio" name="subject" value="Math" style="margin-left: 20px"> Math
-                    <input type="radio" name="subject" value="Science" style="margin-left: 20px"> Science
-                    <input type="radio" name="subject" value="Social Studies" style="margin-left: 20px"> Social Studies<br>
-        <br>Select the grade of the student requesting help<br>
-                    <input type="radio" name="grade" value="Kindergarten"> K
-                    <input type="radio" name="grade" value="First" style="margin-left: 20px"> 1st
-                    <input type="radio" name="grade" value="Second" style="margin-left: 20px"> 2nd
-                    <input type="radio" name="grade" value="Third" style="margin-left: 20px"> 3rd
-                    <input type="radio" name="grade" value="Fourth" style="margin-left: 20px"> 4th
-                    <input type="radio" name="grade" value="Fifth" style="margin-left: 20px"> 5th
-                    <input type="radio" name="grade" value="Sixth" style="margin-left: 20px"> 6th<br>
-        <br><input type="button" onclick="check(this.form)" value="Submit"/>
-    </div>
-    </form>
-
+<!--Placeholder for where the variables are placed on the page-->
     <br>
+    <p id="name"></p>
     <p id="verify"></p>
     <p id="url"></p>
     <p id="subj"></p>
     <p id="grd"></p>
+<!----------------------------------------------->
 
-<!-- The Script Below Defines the username and Password-->
+<!-- The Script Below Defines what is done when the button is clicked-->
 <script>
+    var sender = localStorage.getItem('userid');
 function check(form){
-    
-    document.getElementById("verify").innerHTML = "Please verify the following information before leaving the page:"
+    submCount++;
+    document.getElementById("name").innerHTML = "Name: " + sender;
     document.getElementById("url").innerHTML = "Link: " + form.link.value;
     document.getElementById("subj").innerHTML = "Subject: " + form.subject.value;
     document.getElementById("grd").innerHTML = "Grade: " + form.grade.value;
-    localStorage.link = form.link.value;
-    localStorage.subject = form.subject.value;
-    localStorage.grade = form.grade.value;
-    
-    if(form.userid.value == "caleb" && form.pswrd.value == "h"){
-        open("https://www.youtube.com/")
-    }
-    else{
-        alert("the username and password you entered are wrong")
-    }
+    localStorage['link'+submCount] = form.link.value;
+    localStorage['subject'+submCount] = form.subject.value;
+    localStorage['grade'+submCount] = form.grade.value;
+    localStorage['name'+submCount] = form.name.value;
+    localStorage.sender = sender;
 }
 </script>
-<!-------------------------------------------------------->
+<!----------------------------------------------------------------------->
 
 </body>
 </div>
 </div>
 
 <!------------------------------------FOOTER-------------------------------------->
-<footer class="site-footer">
+<footer id = "footer" class="site-footer">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-6">
