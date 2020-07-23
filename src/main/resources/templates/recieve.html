@@ -61,7 +61,7 @@
   
   <div id="animal-info"></div>
 </body>
- <!-- BELOW IS THE SCRIPT FOR RECIEVING THE JASON FILE DATA-->
+ <!-- BELOW IS THE SCRIPT FOR RECIEVING THE JSON FILE DATA-->
 <script>
   var clickCounter = 1;
   var animalContainer = document.getElementById("animal-info");
@@ -86,6 +86,7 @@
       htmlString += "<p> Name: " + data[i].name;
       htmlString += "<p> Subject: " + data[i].subject;
       htmlString += "<p> Grade: " + data[i].grade;
+      htmlString += "<p> Link: " + data[i].link;
     }
       animalContainer.insertAdjacentHTML('beforeend', htmlString);
   };
