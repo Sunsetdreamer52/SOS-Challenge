@@ -22,15 +22,12 @@
       <img src="/lang-logo.png" style="width:200px;height:200px">
     </a>
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <input type="text" name="userid" class="form-control" placeholder="First and Last Name">
-    <input type="text" name="pswrd" class="form-control" placeholder="Password">
+    <input type="text" name="userid" class="form-control" placeholder="Username" required>
+    <input type="text" name="pswrd" class="form-control" placeholder="Password" required>
     <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
     </div>
     <button class="btn btn-lg btn-primary btn-block" onclick="check(this.form)" href="/">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">&copy; if already signed in, enable pop-ups</p>
+    <p class="mt-5 mb-3 text-muted">Try the username:"logs" to view submission logs</p>
   </form>
   
 <!--CHECK IF THE USER IS ALREADY LOGGED IN-->
